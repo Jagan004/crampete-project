@@ -115,6 +115,7 @@ const [existUser,setExistUser] = useState([
     existUser.push(form)
  }
  ,[form])
+ console.log("added");
 console.log(existUser);
 console.log(form);
     return (

@@ -1,50 +1,127 @@
-body
-{
+body {
     overflow-x: hidden;
 }
-.products-sep
-{
-    margin-top: 10px; 
+
+.products-sep {
+    margin-top: 10px;
 }
-.pro-1,.pro-2,.pro-3,.pro-4
-{
+
+.pro-1,
+.pro-2,
+.pro-3,
+.pro-4 {
     position: relative;
     cursor: pointer;
 }
-.pro-1 div,.pro-3 div,.pro-4 div
-{
+
+.pro-1 div,
+.pro-3 div,
+.pro-4 div,
+.pro-2 div {
     position: absolute;
     left: 23%;
-    bottom:0%;
+    bottom: 0%;
     opacity: 0;
     transition: all 0.5s ease-in-out;
     color: #454545;
 }
-.pro-1:hover div,.pro-2:hover div,.pro-3:hover div,.pro-4:hover div
-{
+
+.pro-1:hover div,
+.pro-2:hover div,
+.pro-3:hover div,
+.pro-4:hover div {
     bottom: 50%;
     opacity: 1;
 }
-img
-{
+
+img {
     margin-bottom: 10px;
-  transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
-.pro-1:hover img,.pro-2:hover img,.pro-3:hover img,.pro-4:hover img
-{
+
+.pro-1:hover img,
+.pro-2:hover img,
+.pro-3:hover img,
+.pro-4:hover img {
     filter: blur(2px);
     box-shadow: 0px 0px 5px #000;
 }
-.pro-2 div
-{
-    position: absolute;
-    left: 10%;
-    bottom:0%;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
-}
-.clr a
-{
+
+.clr a {
     color: #fff !important;
     text-decoration: none;
+}
+
+.products-sep h1 {
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .pro-1 div,
+    .pro-3 div,
+    .pro-4 div {
+        position: absolute;
+        left: 23%;
+        bottom: 0%;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        color: #454545;
+    }
+
+    .pro-2 div {
+        position: absolute;
+        left: 17%;
+        bottom: 0%;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        color: #454545;
+    }
+
+    .products-sep h1 {
+        font-size: 4rem;
+    }
+
+    .clr {
+        width: 50%;
+    }
+
+    .clr a {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 413px) {
+    .products-sep h1 {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 281px) {
+    .products-sep h1 {
+        font-size: 2rem;
+    }
+
+    .clr {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .products-sep h1 {
+        font-size: 30px;
+    }
+
+    .clr {
+        width: 60%;
+    }
+
+    .pro-2 div {
+        position: absolute;
+        left: 17%;
+        bottom: 0%;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        color: #454545;
+    }
 }

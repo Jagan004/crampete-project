@@ -4,21 +4,41 @@ import {useState} from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './login.css'
 function Login() {
-    const [error, setError] = useState({
-        emailErr: '',
-        passwordErr: '',
-    })
+    const [error, setError] = useState("")
     const [form, setForm] = useState({
         email: '',
         password: '',
     })
+    
+    const value = JSON.parse(sessionStorage.getItem("existingUser"))
+    console.log(value);
+
+const checkHandeler = (e) =>{
+let obj = {}
+obj[e.target.name] = e.target.value
+setForm({...form,...obj})
+
+value.map((val)=>{
+    if(val.email !== form.email || val.password !== form.password)
+    {
+        setError("Email or Password not found")
+    }
+    else
+    {
+        setError('')
+    }
+})
+}
+
+
     return (
         <>
             <div className='align'>
                 <div className='login'>
                     <h1>Login</h1>
-                    <input type='email' name="email" placeholder='Enter Your Email' /><br></br>
-                    <input type='password' name="password" placeholder='Enter Your Password' /><br></br>
+                    <input type='email' name="email" placeholder='Enter Your Email' onChange={checkHandeler} /><br></br>
+                    <input type='password' name="password" placeholder='Enter Your Password' onChange={checkHandeler}/><br></br>
+                    <small>{error}</small>
                     <div className='login-btn'>
                         <p>don't have account <span><Link to="/signin">sign up</Link></span></p>
                         <button><Link to="/home">Submit</Link></button>

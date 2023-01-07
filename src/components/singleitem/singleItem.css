@@ -64,3 +64,54 @@
 {
     background-color: rgb(241, 119, 37);
 }
+@media only screen and (max-width: 413px) {
+
+    .singleItem-sep img
+    {
+        height: 50vh;
+    }
+    .singleItem-sep div div button
+{
+    height: 20%;
+}
+.singleItem-sep div div button
+{
+   width: 100%;
+}
+  }
+  @media only screen and (max-width: 541px) {
+
+    .singleItem-sep div div button
+{
+    height: 10%;
+}
+.singleItem-sep div div button
+{
+   width: 100%;
+}
+  }
+  @media only screen and (max-width: 281px) {
+
+    .singleItem-sep div div button
+{
+    height: 100%;
+}
+.singleItem-sep div div button
+{
+   width: 100%;
+}
+  }
+  @media only screen and (max-width: 1281px) {
+
+    .singleItem-sep div
+    {
+        background-color:#6cb9ff5e;
+        color: #383838;
+        padding: 20px;
+        text-align: left;
+        overflow-y: hidden;
+        margin: auto;
+        margin-top: 10px;
+        width: 100%;
+    }
+  }

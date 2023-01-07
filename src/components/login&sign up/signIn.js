@@ -27,6 +27,10 @@ const [existUser,setExistUser] = useState([
         re_password: 'jagan'
     }
 ])
+
+const [isValid,setIsValid] = useState(false)
+
+
     function checkHandeler(e) {
 
 
@@ -113,6 +117,7 @@ const [existUser,setExistUser] = useState([
     }
  useEffect(()=>{
     existUser.push(form)
+    sessionStorage.setItem("existingUser",JSON.stringify(existUser))
  }
  ,[form])
  console.log("added");
@@ -159,8 +164,9 @@ console.log(form);
                     /><br></br>
                     <small>{error.re_passwordErr}</small>
                     <button
-                    disabled={!error.nameErr && !error.emailErr && !error.passwordErr && !error.re_passwordErr && !error.phoneErr ? true : false}
-                    ><Link to='/'>Submit</Link></button>
+                    disabled={isValid}
+                    ><Link to='/'>Submit</Link>
+                    </button>
                 </div>
             </div>
         </>

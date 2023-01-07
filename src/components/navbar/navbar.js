@@ -11,8 +11,10 @@ import { useEffect } from 'react';
 import {selectCount} from '../cart/counter'
 import { useDispatch, useSelector } from 'react-redux'
 import { item } from '../cart/cartRedux'
+import {gettingValue} from "../home/homeSearchLogics"
 function NavScrollExample({name}) {
 const count = useSelector(item)
+const dispatch = useDispatch(gettingValue)
     return (
         <Navbar bg="dark" expand="lg" >
             <Container fluid  >
@@ -26,7 +28,11 @@ const count = useSelector(item)
                         placeholder="Search"
                         className="me-2"
                         aria-label="Search"
-                        onChange={(e) => name(e.target.value)}
+                        onChange={(e) => {
+                            dispatch(gettingValue(e.target.value))
+                            name(e.target.value)
+                            
+                        }}
                     />
                     {/* <Button variant="outline-primary text-white">Search</Button> */}
                 </Form>

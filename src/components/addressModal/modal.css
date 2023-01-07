@@ -1,0 +1,15 @@
+.modal-edit
+{
+    margin: auto;
+
+}
+.modal-edit p
+{
+    margin-top: 10px;
+    font-size: 20px;
+    color: #454545;
+}
+.modal-edit input
+{
+    outline: none;
+}

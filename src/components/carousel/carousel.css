@@ -1,0 +1,9 @@
+.lnk a
+{
+    text-decoration: none;
+    color: #fafafa;
+}
+.lnk
+{
+    max-width: 100%;
+}

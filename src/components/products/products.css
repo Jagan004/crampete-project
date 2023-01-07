@@ -1,0 +1,50 @@
+body
+{
+    overflow-x: hidden;
+}
+.products-sep
+{
+    margin-top: 10px; 
+}
+.pro-1,.pro-2,.pro-3,.pro-4
+{
+    position: relative;
+    cursor: pointer;
+}
+.pro-1 div,.pro-3 div,.pro-4 div
+{
+    position: absolute;
+    left: 23%;
+    bottom:0%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    color: #454545;
+}
+.pro-1:hover div,.pro-2:hover div,.pro-3:hover div,.pro-4:hover div
+{
+    bottom: 50%;
+    opacity: 1;
+}
+img
+{
+    margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+}
+.pro-1:hover img,.pro-2:hover img,.pro-3:hover img,.pro-4:hover img
+{
+    filter: blur(2px);
+    box-shadow: 0px 0px 5px #000;
+}
+.pro-2 div
+{
+    position: absolute;
+    left: 10%;
+    bottom:0%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+.clr a
+{
+    color: #fff !important;
+    text-decoration: none;
+}

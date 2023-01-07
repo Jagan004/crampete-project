@@ -1,0 +1,47 @@
+.filter
+{
+    background-color: rgb(184, 181, 181);
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 10px;
+}
+.filter span
+{
+    cursor: pointer;
+    color: #3f3f3f;
+}
+.check-filter
+{
+    padding: 20px;
+}
+.check-filter div
+{
+    margin-top: 20px;
+}
+.check-filter div h4
+{
+    color: #3f3f3f;
+    font-size: 30px;
+    text-shadow: 2px 2px 5px #a8a5a5;
+}
+.check-filter div label
+{
+    font-size: 20px;
+    cursor: pointer;
+}
+.filter-bg
+{
+    background-color:aliceblue;
+}
+.check-filter div input
+{
+    cursor: pointer;
+}
+.filter-name
+{
+    font-size: 50px;
+    -webkit-text-stroke: 2px #3f3f3f;
+    -webkit-text-fill-color: aliceblue;
+}

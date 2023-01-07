@@ -1,0 +1,78 @@
+.align
+{
+   background-image: url(http://erpa.co.in/wp-content/uploads/2017/06/erpa-login-bg.jpg);
+   height: 100vh;
+   display: flex;
+   align-items: center;
+}
+.login
+{
+   background-color: #5656568e;
+   padding: 20px;
+   width: 50%;
+   margin: auto;
+   margin-top: 50px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 8px;
+}
+.login h1
+{
+    color: #fafafa;
+}
+.login input
+{
+    margin: 10px 0;
+    width: 50%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+.login input::placeholder
+{
+    color: #fafafa;
+}
+.login button
+{
+    padding: 10px;
+    background-color: rgb(250, 76, 45);
+    color: #fafafa;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    width: 50%;
+}
+.login button:hover
+{
+    background-color: rgb(250, 61, 27);
+}
+.login button:active
+{
+    background-color: rgb(250, 76, 45);
+}
+.login button a
+{
+    text-decoration: none;
+    color: #fafafa;
+}
+.login-btn
+{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.login-btn p
+{
+    color: #fafafa;
+    padding-right: 20px;
+}
+.login-btn p span a
+{
+    color: rgb(131, 131, 238);
+    text-decoration: underline;
+    cursor: pointer;
+}

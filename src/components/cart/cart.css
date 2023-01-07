@@ -1,0 +1,78 @@
+.cart-sep-btn
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cart-sep-btn button
+{
+    background-color: crimson;
+    color: #fafafa;
+    font-size: 20px;
+    width: 100%;
+    margin: 10px;
+}
+.cart-sep-btn button:hover
+{
+    background-color: rgb(241, 22, 66);
+    color: #fafafa;
+}
+.cart-sep-btn button:active
+{
+    background-color: crimson !important;
+    color: #fafafa !important;
+    border: none !important;
+}
+.cart-sep
+{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 50%;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    background-color: rgba(0, 128, 128, 0.726);
+    margin-top: 10px;
+    border-radius: 20px;
+}
+.cart-main
+{
+   /* background-color: #d1e5eb; */
+   /* background-image: url(https://thumbs.dreamstime.com/b/seamless-shopping-pattern-decorated-shirts-pants-shoes-cart-gift-price-tag-shopping-bag-vector-illustration-seamless-194838552.jpg); */
+
+}
+.cart-sep p,h4
+{
+    color: #fafafa;
+    font-size: 20px;
+}
+.bg-clr
+{
+    background-color: rgb(175, 215, 235);
+    padding: 7px 0 26px 0;
+    width: 60%;
+    margin: auto;
+    
+}
+.icon
+{
+    font-size: 20px;
+    cursor: pointer;
+    color: #454545;
+    align-self: baseline;
+}
+.icon:hover
+{
+    color: #000;
+}
+.cart-sep-product-price button
+{
+    padding: 10px;
+    background-color:tomato;
+    color: #fafafa;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}

@@ -1,0 +1,80 @@
+.address-plus
+{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.address-plus span
+{
+    background-color: #6aaf6aad;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+}
+.address div
+{
+    margin-top: 20px;
+    padding: 10px;
+    color: #0a0a0a;
+    box-shadow: rgba(0, 0, 0, 0.699) 0px 5px 15px;
+    background-color: #77eb68;
+}
+.profile
+{
+    display: flex;
+    align-items: flex-end;
+}
+.username
+{
+    margin: 20px 0;
+}
+.username h5
+{
+    color: #000;
+}
+.username h5 span
+{
+    color: #454545;
+}
+.profile-btn
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.profile-btn button
+{
+    padding: 10px;
+    background-color: tomato;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: #fafafa;
+    font-size: 20px;
+    width: 100%;
+}
+.profile-btn button a
+{
+    text-decoration: none;
+    color: #fafafa;
+}
+.update-remove
+{
+    display: flex;
+    justify-content: space-between;
+}
+.update-remove button
+{
+    padding: 10px;
+    background-color: rgb(226, 43, 43);
+    color: #fafafa;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+}
+.update-remove button:first-of-type
+{
+    background-color:steelblue;
+}

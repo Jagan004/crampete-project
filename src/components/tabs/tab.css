@@ -1,0 +1,14 @@
+.main-tab li button
+{
+    background-color: #f76825ee !important;
+    color: #fafafa !important;
+    width: 100%;
+}
+.main-tab
+{
+    margin-top: 20px;
+}
+.cotent
+{
+    color: #454545;
+}

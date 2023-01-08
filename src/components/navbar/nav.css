@@ -2,9 +2,11 @@
 {
     color: #fff !important;
     transition: all 0.3s ease-in-out;
+    
 }
 .nav-bg a:hover
 {
+  
   transform: scale(1.1);
   filter: drop-shadow(2px 2px 2px #000);   
 }
@@ -14,5 +16,6 @@
 }
 .icon a span a
 {
+  cursor: pointer;
   text-decoration: none;
 }

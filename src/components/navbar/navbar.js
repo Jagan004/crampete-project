@@ -11,10 +11,38 @@ import { useEffect } from 'react';
 import {selectCount} from '../cart/counter'
 import { useDispatch, useSelector } from 'react-redux'
 import { item } from '../cart/cartRedux'
+import {useHistory} from 'react-router-dom'
 import {gettingValue} from "../home/homeSearchLogics"
 function NavScrollExample({name}) {
 const count = useSelector(item)
-const dispatch = useDispatch(gettingValue)
+// const dispatch = useDispatch(gettingValue)
+const history = useHistory();
+
+function routing(typed)
+{
+    if(typed == "mens")
+{
+  history.push("/items?q=mens")
+  typed = ""
+}
+else if(typed == "womens")
+{
+  history.push("/items?q=womens")
+  typed = ""
+}
+else if(typed == "kids")
+{
+  history.push("/items?q=kids")
+  typed = ""
+}
+else if(typed == "electronics")
+{
+  history.push("/items?q=electronics")
+  typed = ""
+}
+}
+
+
     return (
         <Navbar bg="dark" expand="lg" >
             <Container fluid  >
@@ -29,9 +57,9 @@ const dispatch = useDispatch(gettingValue)
                         className="me-2"
                         aria-label="Search"
                         onChange={(e) => {
-                            dispatch(gettingValue(e.target.value))
-                            name(e.target.value)
-                            
+                            routing(e.target.value)
+                            // dispatch(gettingValue(e.target.value))
+                            name(e.target.value)  
                         }}
                     />
                     {/* <Button variant="outline-primary text-white">Search</Button> */}

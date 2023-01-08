@@ -1,7 +1,7 @@
 import { Button } from 'bootstrap'
 import React from 'react'
 import {useState} from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link ,useHistory} from 'react-router-dom'
 import './login.css'
 function Login() {
     const [error, setError] = useState("")
@@ -18,17 +18,27 @@ let obj = {}
 obj[e.target.name] = e.target.value
 setForm({...form,...obj})
 
-value.map((val)=>{
-    if(val.email !== form.email || val.password !== form.password)
-    {
-        setError("Email or Password not found")
-    }
-    else
-    {
-        setError('')
-    }
-})
+
 }
+
+const history = useHistory()
+
+function checkValidation()
+{
+    value.map((val)=>{
+        if(val.email == form.email || val.password == form.password)
+        {
+            setError('')
+            history.push("/home")
+            
+        }
+        else
+        {
+            setError("Email or Password not found")
+        }
+    })
+    }
+
 
 
     return (
@@ -41,7 +51,7 @@ value.map((val)=>{
                     <small>{error}</small>
                     <div className='login-btn'>
                         <p>don't have account <span><Link to="/signin">sign up</Link></span></p>
-                        <button><Link to="/home">Submit</Link></button>
+                        <button onClick={checkValidation}>Submit</button>
                     </div>
                 </div>
             </div>

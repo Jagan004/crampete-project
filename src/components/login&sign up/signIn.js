@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import './signin.css'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link,useHistory } from 'react-router-dom'
 function SignIn() {
 
     const [error, setError] = useState({
@@ -37,89 +37,97 @@ const [isValid,setIsValid] = useState(false)
         let obj = {}
         obj[e.target.name] = e.target.value
         setForm({ ...form, ...obj })
-        
-        let obj_1 = {}
+    }
+    const history = useHistory()
+function check()
+{
+    
+    let obj_1 = {}
 
-        for (let key in form) {
+    for (let key in form) {
 
-            if (form[key].trim().length === 0) {
+        if (form[key].trim().length === 0) {
 
-                obj_1[key + "Err"] = "Mandatory"
+            obj_1[key + "Err"] = "Mandatory"
 
-            }
-            else if (key === "email") {
+        }
+        else if (key === "email") {
 
-                let mail = /^([A-Za-z0-9_\.\-]+)@([A-Za-z]+).([a-zA-Z]{3})$/
+            let mail = /^([A-Za-z0-9_\.\-]+)@([A-Za-z]+).([a-zA-Z]{3})$/
 
-                if (mail.test(form[key])) {
-
-                    obj_1[key + "Err"] = ""
-
-                }
-                else {
-
-                    obj_1[key + "Err"] = "invalid email"
-
-                }
-
-            }
-            else if (key === "password") {
-
-                let pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&])[\w!@#$%^&]{8,100}$/
-
-                if (pass.test(form[key])) {
-
-                    obj_1[key + "Err"] = ""
-
-                }
-                else {
-
-                    obj_1[key + "Err"] = "Weak password"
-
-                }
-
-            }
-            else if (key === "phone") {
-
-                if (form[key].trim().length === 10) {
-                    
-                    obj_1[key + "Err"] = ""
-
-                }
-                else {
-
-                    obj_1[key + "Err"] = "Invalid phone number"
-
-                }
-
-            }
-            else if (key === "re_password") {
-
-                if (form[key].trim() == form["password"]) {
-                    
-                    obj_1[key + "Err"] = ""
-
-                }
-                else {
-
-                    obj_1[key + "Err"] = "password not match"
-
-                }
-
-            }
-            else {
+            if (mail.test(form[key])) {
 
                 obj_1[key + "Err"] = ""
 
             }
+            else {
+
+                obj_1[key + "Err"] = "invalid email"
+
+            }
+
         }
+        else if (key === "password") {
+
+            let pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&])[\w!@#$%^&]{8,100}$/
+
+            if (pass.test(form[key])) {
+
+                obj_1[key + "Err"] = ""
+
+            }
+            else {
+
+                obj_1[key + "Err"] = "Weak password"
+
+            }
+
+        }
+        else if (key === "phone") {
+
+            if (form[key].trim().length === 10) {
+                
+                obj_1[key + "Err"] = ""
+
+            }
+            else {
+
+                obj_1[key + "Err"] = "Invalid phone number"
+
+            }
+
+        }
+        else if (key === "re_password") {
+
+            if (form[key].trim() == form["password"]) {
+                
+                obj_1[key + "Err"] = ""
+
+            }
+            else {
+
+                obj_1[key + "Err"] = "password not match"
+
+            }
+
+        }
+        else {
+
+            obj_1[key + "Err"] = ""
+            
+        }
+    }
+    
+    if(Object.values(obj_1).filter((ele)=> Boolean(ele)).length === 0)
+    {
+        existUser.push(form)
+    sessionStorage.setItem("existingUser",JSON.stringify(existUser))
+        history.push("/")
+    }else{
         setError(obj_1)
     }
- useEffect(()=>{
-    existUser.push(form)
-    sessionStorage.setItem("existingUser",JSON.stringify(existUser))
- }
- ,[form])
+}
+
  console.log("added");
 console.log(existUser);
 console.log(form);
@@ -164,8 +172,9 @@ console.log(form);
                     /><br></br>
                     <small>{error.re_passwordErr}</small>
                     <button
-                    disabled={isValid}
-                    ><Link to='/'>Submit</Link>
+                    onClick={check}
+                    >
+                        Login
                     </button>
                 </div>
             </div>

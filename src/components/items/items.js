@@ -725,31 +725,49 @@ function Item() {
         setProductData(inputSearch)
     }
 
-
     // input filter
-    function getColor(fill) {
+    function getColor(value, checked) {
+
+
         const color = data[query].filter((val) => {
-            return val.color == fill
-        })
-        setProductData(color)
-        console.log(color);
-    }
-    function getBrand(fill) {
-        const brand = data[query].filter((val) => {
-            return val.brand === fill
-        })
-        setProductData(brand)
-        // console.log(brand);
-    }
-
-
-    function getPrice(fill) {
-        console.log(fill);
-        const price = data[query].filter((val) => {
-            if(val.Price < fill)
-            {
+            if (checked == true) {
+                return val.color == value
+            }
+            else {
                 return val
             }
+        })
+        setProductData(color)
+
+
+    }
+    function getBrand(value, checked) {
+        const brand = data[query].filter((val) => {
+            if (checked == true) {
+                return val.brand === value
+            }
+            else {
+                return val
+            }
+            
+        })
+        setProductData(brand)
+       
+    }
+
+
+    function getPrice(value, checked) {
+
+        const price = data[query].filter((val) => {
+            if (checked == true) {
+                if (val.Price < value) {
+                    return val
+                }
+            }
+            else {
+                return val
+            }
+            
         })
         setProductData(price)
         console.log(price);
@@ -762,7 +780,7 @@ function Item() {
             <NavScrollExample name={changeHandeler} />
             <div className="items-filter">
                 <div>
-                    <Filter getColor={getColor} type={query} getBrand={getBrand} getPrice={getPrice}/>
+                    <Filter getColor={getColor} type={query} getBrand={getBrand} getPrice={getPrice} />
                 </div>
                 <div className="row items-sep">
                     {

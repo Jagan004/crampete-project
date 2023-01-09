@@ -96,21 +96,21 @@ function Filter({ getColor,getBrand,getPrice,type}) {
           <div className='check-filter'>
             <div>
               <h4>Price</h4>
-              <input type="checkbox" id='price_1' value={price.price_1} onChange={(e)=>getPrice(e.target.value)}/> <label htmlFor='price_1'>below ${price.price_1}</label><br></br>
-              <input type="checkbox" id='price_2' value={price.price_2} onChange={(e)=>getPrice(e.target.value)}/> <label htmlFor='price_2'>below ${price.price_2}</label><br></br>
-              <input type="checkbox" id='price_3' value={price.price_3} onChange={(e)=>getPrice(e.target.value)}/> <label htmlFor='price_3'>below ${price.price_3}</label>
+              <input type="checkbox" id='price_1' value={price.price_1} onChange={(e)=>getPrice(e.target.value,e.target.checked)}/> <label htmlFor='price_1'>below ${price.price_1}</label><br></br>
+              <input type="checkbox" id='price_2' value={price.price_2} onChange={(e)=>getPrice(e.target.value,e.target.checked)}/> <label htmlFor='price_2'>below ${price.price_2}</label><br></br>
+              <input type="checkbox" id='price_3' value={price.price_3} onChange={(e)=>getPrice(e.target.value,e.target.checked)}/> <label htmlFor='price_3'>below ${price.price_3}</label>
             </div>
             <div>
               <h4>color</h4>
-              <input type="checkbox" id='clr_1' value={color.clr_1} onChange={(e)=>getColor(e.target.value)}/> <label htmlFor='clr_1'>{color.clr_1}</label><br></br>
-              <input type="checkbox" id='clr_2' value={color.clr_2} onChange={(e)=>getColor(e.target.value)}/> <label htmlFor='clr_2'>{color.clr_2}</label><br></br>
-              <input type="checkbox" id='clr_3' value={color.clr_3} onChange={(e)=>getColor(e.target.value)}/> <label htmlFor='clr_3'>{color.clr_3}</label>
+              <input type="checkbox" id='clr_1' value={color.clr_1} onChange={(e)=>getColor(e.target.value,e.target.checked)}/> <label htmlFor='clr_1'>{color.clr_1}</label><br></br>
+              <input type="checkbox" id='clr_2' value={color.clr_2} onChange={(e)=>getColor(e.target.value,e.target.checked)}/> <label htmlFor='clr_2'>{color.clr_2}</label><br></br>
+              <input type="checkbox" id='clr_3' value={color.clr_3} onChange={(e)=>getColor(e.target.value,e.target.checked)}/> <label htmlFor='clr_3'>{color.clr_3}</label>
             </div>
             <div>
               <h4>brand</h4>
-              <input type="checkbox" id='brand_1' value={name.brand_1} onChange={(e)=>getBrand(e.target.value)}/> <label htmlFor='brand_1'>{name.brand_1}</label><br></br>
-              <input type="checkbox" id='brand_2' value={name.brand_2} onChange={(e)=>getBrand(e.target.value)}/> <label htmlFor='brand_2'>{name.brand_2}</label><br></br>
-              <input type="checkbox" id='brand_3' value={name.brand_3} onChange={(e)=>getBrand(e.target.value)}/> <label htmlFor='brand_3'>{name.brand_3}</label>
+              <input type="checkbox" id='brand_1' value={name.brand_1} onChange={(e)=>getBrand(e.target.value,e.target.checked)}/> <label htmlFor='brand_1'>{name.brand_1}</label><br></br>
+              <input type="checkbox" id='brand_2' value={name.brand_2} onChange={(e)=>getBrand(e.target.value,e.target.checked)}/> <label htmlFor='brand_2'>{name.brand_2}</label><br></br>
+              <input type="checkbox" id='brand_3' value={name.brand_3} onChange={(e)=>getBrand(e.target.value,e.target.checked)}/> <label htmlFor='brand_3'>{name.brand_3}</label>
             </div>
           </div>
         </Offcanvas.Body>

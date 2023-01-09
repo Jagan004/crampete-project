@@ -47,7 +47,7 @@
 .sign-up-bg
 {
     background-image: url(http://erpa.co.in/wp-content/uploads/2017/06/erpa-login-bg.jpg);
-   height: 100vh;
+   height: 100%;
    display: flex;
    align-items: center;
 }

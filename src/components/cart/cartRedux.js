@@ -8,7 +8,13 @@ export const cartSlice = createSlice({
     ,
     reducers:{
         addToCart:(state,action)=>{
-               state.item.push(action.payload)
+            let check = state.item.findIndex((item)=>item.img == action.payload.img)
+
+            if(check == -1)
+            {
+                state.item.push(action.payload)
+            }
+               
         }
         ,
         removeFromCart:(state,action)=>{

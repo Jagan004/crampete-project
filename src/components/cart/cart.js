@@ -4,7 +4,7 @@ import './cart.css'
 import { increment, decrement, selectCount } from './counter'
 import { useDispatch, useSelector } from 'react-redux'
 import { item } from './cartRedux'
-import {removeFromCart} from '../cart/cartRedux'
+import { removeFromCart } from '../cart/cartRedux'
 
 function Cart() {
     const [data, setData] = [
@@ -785,7 +785,7 @@ function Cart() {
     const dispatch = useDispatch()
     const count = useSelector(selectCount)
     const selectedItem = useSelector(item)
-
+    console.log(selectedItem.length);
     return (
         <>
             <div className='cart-main'>
@@ -793,15 +793,13 @@ function Cart() {
                 {
                     selectedItem.map((val) => {
 
-                        if (selectedItem.length == 0) {
-                            return (
-                                <h1>empty</h1>
-                            )
+                        if (selectedItem.length === 0) {
+                            return <img src='https://assets.lottiefiles.com/custom_og/lf20_dkc8tvbm.png' />
                         }
                         else {
                             return (
                                 <div className='bg-clr'>
-                                    
+
                                     <ul className='cart-sep'>
                                         <li><img src={val.img} height="200" alt='trending product' /></li>
                                         <li className='cart-sep-product-price'>
@@ -821,12 +819,12 @@ function Cart() {
                                                 <button className='btn' onClick={() => dispatch(increment())}>+</button>
                                             </div>
                                         </li>
-                                        <span 
-                                        class="material-symbols-outlined icon"
-                                        onClick={()=>dispatch(removeFromCart(val.id))}
+                                        <span
+                                            class="material-symbols-outlined icon"
+                                            onClick={() => dispatch(removeFromCart(val.id))}
                                         >
-                                        cancel
-                                    </span>
+                                            cancel
+                                        </span>
                                     </ul>
                                 </div>
                             )

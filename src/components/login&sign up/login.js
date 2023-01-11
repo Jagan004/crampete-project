@@ -11,7 +11,7 @@ function Login() {
     })
     
     const value = JSON.parse(sessionStorage.getItem("existingUser"))
-    console.log(value);
+
 
 const checkHandeler = (e) =>{
 let obj = {}
@@ -26,7 +26,7 @@ const history = useHistory()
 function checkValidation()
 {
     value.map((val)=>{
-        if(val.email == form.email || val.password == form.password)
+        if(val.email == form.email && val.password == form.password)
         {
             setError('')
             history.push("/home")

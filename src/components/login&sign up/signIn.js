@@ -128,9 +128,6 @@ function check()
     }
 }
 
- console.log("added");
-console.log(existUser);
-console.log(form);
     return (
         <>
             <div className='sign-up-bg'>

@@ -35,7 +35,7 @@ export default function HoverRating() {
       <Rating
         name="hover-feedback"
         value={value}
-        precision={0.5}
+        precision={3.5}
         getLabelText={getLabelText}
         onChange={(event, newValue) => {
           setValue(newValue);

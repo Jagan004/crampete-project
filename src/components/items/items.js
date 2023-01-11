@@ -770,8 +770,6 @@ function Item() {
             
         })
         setProductData(price)
-        console.log(price);
-        // console.log(brand);
     }
 
 

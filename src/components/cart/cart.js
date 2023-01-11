@@ -785,20 +785,19 @@ function Cart() {
     const dispatch = useDispatch()
     const count = useSelector(selectCount)
     const selectedItem = useSelector(item)
-    console.log(selectedItem.length);
     return (
         <>
             <div className='cart-main'>
                 <NavScrollExample />
                 {
-                    selectedItem.map((val) => {
+                    selectedItem.map((val,ind) => {
 
                         if (selectedItem.length === 0) {
                             return <img src='https://assets.lottiefiles.com/custom_og/lf20_dkc8tvbm.png' />
                         }
                         else {
                             return (
-                                <div className='bg-clr'>
+                                <div className='bg-clr' key={ind}>
 
                                     <ul className='cart-sep'>
                                         <li><img src={val.img} height="200" alt='trending product' /></li>

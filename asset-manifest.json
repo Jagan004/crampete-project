@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/crampete-project/static/css/main.412348c8.css",
+    "main.js": "/crampete-project/static/js/main.f41991b4.js",
+    "static/js/787.46493d11.chunk.js": "/crampete-project/static/js/787.46493d11.chunk.js",
+    "static/media/joker.png": "/crampete-project/static/media/joker.f6cc872a78daef56f207.png",
+    "static/media/revicons.eot": "/crampete-project/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/crampete-project/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/crampete-project/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/crampete-project/index.html",
+    "main.412348c8.css.map": "/crampete-project/static/css/main.412348c8.css.map",
+    "main.f41991b4.js.map": "/crampete-project/static/js/main.f41991b4.js.map",
+    "787.46493d11.chunk.js.map": "/crampete-project/static/js/787.46493d11.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.412348c8.css",
+    "static/js/main.f41991b4.js"
+  ]
+}

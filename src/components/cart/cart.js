@@ -790,12 +790,13 @@ function Cart() {
             <div className='cart-main'>
                 <NavScrollExample />
                 {
+                    selectedItem.length === 0 ?
+                        <img src='https://assets.lottiefiles.com/custom_og/lf20_dkc8tvbm.png' />
+                  :
                     selectedItem.map((val,ind) => {
 
-                        if (selectedItem.length === 0) {
-                            return <img src='https://assets.lottiefiles.com/custom_og/lf20_dkc8tvbm.png' />
-                        }
-                        else {
+                        
+                    
                             return (
                                 <div className='bg-clr' key={ind}>
 
@@ -827,7 +828,7 @@ function Cart() {
                                     </ul>
                                 </div>
                             )
-                        }
+                        
 
                     })
                 }

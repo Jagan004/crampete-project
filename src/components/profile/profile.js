@@ -58,9 +58,6 @@ const dispatch = useDispatch()
                             src="https://thumbs.dreamstime.com/b/businessman-icon-vector-male-avatar-profile-image-profile-businessman-icon-vector-male-avatar-profile-image-182095609.jpg"
                             height='100'
                         />
-                        <p>
-                            <a href='#'>Edit</a>
-                        </p>
                     </div>
                     <div className='username'>
                         <h5>Username : <span>Jagan</span></h5>

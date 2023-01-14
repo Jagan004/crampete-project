@@ -18,18 +18,6 @@ function SignIn() {
         password: '',
         re_password: '',
     })
-const [existUser,setExistUser] = useState([
-    {
-        name: 'jagan',
-        email: 'email',
-        phone: '9080565928',
-        password: 'jagan',
-        re_password: 'jagan'
-    }
-])
-
-const [isValid,setIsValid] = useState(false)
-
 
     function checkHandeler(e) {
 
@@ -120,8 +108,7 @@ function check()
     
     if(Object.values(obj_1).filter((ele)=> Boolean(ele)).length === 0)
     {
-        existUser.push(form)
-    sessionStorage.setItem("existingUser",JSON.stringify(existUser))
+    sessionStorage.setItem("existingUser",JSON.stringify(form))
         history.push("/")
     }else{
         setError(obj_1)
@@ -171,7 +158,7 @@ function check()
                     <button
                     onClick={check}
                     >
-                        Login
+                        Register
                     </button>
                 </div>
             </div>

@@ -76,3 +76,8 @@
     text-decoration: underline;
     cursor: pointer;
 }
+.login small
+{
+    color: tomato;
+    transform: translateY(-20px);
+}
